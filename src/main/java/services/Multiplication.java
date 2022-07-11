@@ -1,0 +1,32 @@
+package services;
+
+import dataobjects.FashionCurrency;
+
+public class Multiplication {
+
+  private FashionCurrency leftElement;
+  private int multiply;
+
+  public Multiplication(FashionCurrency leftElement, int multiply) {
+    this.leftElement = leftElement;
+    this.multiply = multiply;
+  }
+
+
+  public FashionCurrency Calc(FashionCurrency leftElement, int multiply) {
+    int lPence = leftElement.getPence();
+    int lShillings = leftElement.getShillings();
+    int lPound = leftElement.getPounds();
+
+    // Convert all in pence
+    lPence = lPence + lShillings * 12 + lPound * 20 * 12;
+
+    int pencesTotal = lPence / multiply;
+
+    OperationsService manageOp = new OperationsService();
+
+    return manageOp.extractValue(pencesTotal, 0, 0);
+
+  }
+
+}
