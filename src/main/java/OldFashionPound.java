@@ -11,7 +11,7 @@ public class OldFashionPound {
     String input = args[0];
 //    System.out.println(input);
     ManagementInput manageInput = new ManagementInput(input);
-    manageInput.extractNumbers();
+    manageInput.extractNumbersFromInput();
 
 
   }
