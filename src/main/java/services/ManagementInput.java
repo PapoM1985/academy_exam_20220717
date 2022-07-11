@@ -1,16 +1,19 @@
 package services;
 
 import dataobjects.FashionCurrency;
+import exceptions.OperatorNotFound;
+import utils.OperatorsEnum;
 
 public class ManagementInput {
 
   private String input;
+  private OperatorsEnum;
 
   public ManagementInput(String input) {
     this.input = input;
   }
 
-  public void extractNumbers() {
+  public FashionCurrency extractNumbersFromInput() {
     StringBuilder myInput = new StringBuilder(input);
 
     StringBuilder pound = new StringBuilder();
@@ -31,6 +34,27 @@ public class ManagementInput {
     money.setShillings(Integer.parseInt(String.valueOf(shillings)));
     money.setPence(Integer.parseInt(String.valueOf(pence)));
 
+    return money;
+  }
+
+  public OperatorsEnum findOperator() throws OperatorNotFound {
+    String[] numbers = input.toString().split(" ");
+    for (String number : numbers) {
+      if (number.equals("+")){
+        return OperatorsEnum.SUM;
+      } else if (number.equals("-")) {
+        return OperatorsEnum.MINUS;
+      } else if (number.equals("/")) {
+        return OperatorsEnum.DIVISION;
+      } else if (number.equals("*")) {
+        return OperatorsEnum.MULTIPLICATION;
+      } else{
+        throw new OperatorNotFound("The mathematical operator could not be found");
+      }
+
+    }
+    }
+    return " ";
   }
 
 }
