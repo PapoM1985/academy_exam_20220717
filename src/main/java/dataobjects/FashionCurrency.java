@@ -10,10 +10,10 @@ public class FashionCurrency {
   private int shillings;
   private int pence;
 
-  public FashionCurrency(int pounds, int shillings, int pence) {
-    this.pounds = pounds;
-    this.shillings = shillings;
-    this.pence = pence;
+  public FashionCurrency() {
+    this.pounds = 0;
+    this.shillings = 0;
+    this.pence = 0;
   }
 
 
