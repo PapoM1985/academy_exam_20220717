@@ -13,7 +13,7 @@ public class Division {
   }
 
 
-  public FashionCurrency Calc(FashionCurrency leftElement, int divider) {
+  public FashionCurrency Calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();

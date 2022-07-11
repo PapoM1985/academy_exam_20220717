@@ -12,8 +12,7 @@ public class Minus {
     this.rightElement = rightElement;
   }
 
-
-  public FashionCurrency Calc(FashionCurrency leftElement, FashionCurrency rightElement) {
+  public FashionCurrency Calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();

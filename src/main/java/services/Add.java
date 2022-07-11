@@ -13,7 +13,7 @@ public class Add {
   }
 
 
-  public FashionCurrency Calc(FashionCurrency leftElement, FashionCurrency rightElement) {
+  public FashionCurrency Calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();
