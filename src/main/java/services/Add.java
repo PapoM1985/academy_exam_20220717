@@ -2,7 +2,7 @@ package services;
 
 import dataobjects.FashionCurrency;
 
-public class Add {
+public class Add implements IMathOperation {
 
   private FashionCurrency leftElement;
   private FashionCurrency rightElement;
@@ -13,7 +13,7 @@ public class Add {
   }
 
 
-  public FashionCurrency Calc() {
+  public FashionCurrency calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();

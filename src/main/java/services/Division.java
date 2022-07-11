@@ -2,7 +2,7 @@ package services;
 
 import dataobjects.FashionCurrency;
 
-public class Division {
+public class Division implements IMathOperation {
 
   private FashionCurrency leftElement;
   private int divider;
@@ -13,7 +13,7 @@ public class Division {
   }
 
 
-  public FashionCurrency Calc() {
+  public FashionCurrency calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();

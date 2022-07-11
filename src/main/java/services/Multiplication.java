@@ -2,7 +2,7 @@ package services;
 
 import dataobjects.FashionCurrency;
 
-public class Multiplication {
+public class Multiplication implements IMathOperation {
 
   private FashionCurrency leftElement;
   private int multiply;
@@ -12,7 +12,7 @@ public class Multiplication {
     this.multiply = multiply;
   }
 
-  public FashionCurrency Calc() {
+  public FashionCurrency calc() {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
     int lPound = leftElement.getPounds();
