@@ -26,9 +26,11 @@ public class Add {
     int shillingsTotal = lShillings + rShillings;
     int poundsTotal = lPound + rPound;
 
-    OperationsService manageOp = new OperationsService();
+    FashionCurrency newMoney = new FashionCurrency();
 
-    return manageOp.extractValue(pencesTotal, shillingsTotal, poundsTotal);
+    newMoney.extractValue(pencesTotal, shillingsTotal, poundsTotal);
+
+    return newMoney;
 
   }
 }

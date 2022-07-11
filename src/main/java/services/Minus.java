@@ -28,9 +28,11 @@ public class Minus {
 
     int pencesTotal = lPence - rPence;
 
-    OperationsService manageOp = new OperationsService();
+    FashionCurrency newMoney = new FashionCurrency();
 
-    return manageOp.extractValue(pencesTotal, 0, 0);
+    newMoney.extractValue(pencesTotal, 0, 0);
+
+    return newMoney;
 
   }
 

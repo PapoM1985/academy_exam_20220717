@@ -12,7 +12,6 @@ public class Multiplication {
     this.multiply = multiply;
   }
 
-
   public FashionCurrency Calc(FashionCurrency leftElement, int multiply) {
     int lPence = leftElement.getPence();
     int lShillings = leftElement.getShillings();
@@ -23,9 +22,11 @@ public class Multiplication {
 
     int pencesTotal = lPence / multiply;
 
-    OperationsService manageOp = new OperationsService();
+    FashionCurrency newMoney = new FashionCurrency();
 
-    return manageOp.extractValue(pencesTotal, 0, 0);
+    newMoney.extractValue(pencesTotal, 0, 0);
+
+    return newMoney;
 
   }
 
