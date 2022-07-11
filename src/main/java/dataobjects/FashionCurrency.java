@@ -1,15 +1,22 @@
 package dataobjects;
 
-public class FashionCurrency {
-  private final String Pounds;
-  private final String Shillings;
-  private final String Pence;
+import lombok.Getter;
+import lombok.Setter;
 
-  public FashionCurrency(String pounds, String shillings, String pence) {
-    Pounds = pounds;
-    Shillings = shillings;
-    Pence = pence;test
+@Getter
+@Setter
+public class FashionCurrency {
+  private int pounds;
+  private int shillings;
+  private int pence;
+
+  public FashionCurrency(int pounds, int shillings, int pence) {
+    this.pounds = pounds;
+    this.shillings = shillings;
+    this.pence = pence;
   }
+
+
 
 
 }
