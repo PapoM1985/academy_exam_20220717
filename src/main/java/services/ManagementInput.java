@@ -7,7 +7,7 @@ import utils.OperatorsEnum;
 public class ManagementInput {
 
   private String input;
-  private OperatorsEnum;
+  private OperatorsEnum operator;
 
   public ManagementInput(String input) {
     this.input = input;
@@ -40,21 +40,17 @@ public class ManagementInput {
   public OperatorsEnum findOperator() throws OperatorNotFound {
     String[] numbers = input.toString().split(" ");
     for (String number : numbers) {
-      if (number.equals("+")){
-        return OperatorsEnum.SUM;
+      if (number.equals("+")) {
+        return operator.SUM;
       } else if (number.equals("-")) {
-        return OperatorsEnum.MINUS;
+        return operator.MINUS;
       } else if (number.equals("/")) {
-        return OperatorsEnum.DIVISION;
+        return operator.DIVISION;
       } else if (number.equals("*")) {
-        return OperatorsEnum.MULTIPLICATION;
-      } else{
-        throw new OperatorNotFound("The mathematical operator could not be found");
+        return operator.MULTIPLICATION;
       }
-
     }
-    }
-    return " ";
+    throw new OperatorNotFound("The mathematical operator could not be found");
   }
 
 }
